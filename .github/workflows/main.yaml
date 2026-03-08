@@ -9,7 +9,6 @@ on:
       - main
 
 env:
-env:
   DOCKER_USER: emilycarla
   SERVICE_NAME: saudacoes-aleatorias
   DOCKER_IMAGE_NAME: emilycarla/ms-saudacoes-aleatorias
