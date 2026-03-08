@@ -9,8 +9,10 @@ on:
       - main
 
 env:
+env:
   DOCKER_USER: emilycarla
   SERVICE_NAME: saudacoes-aleatorias
+  DOCKER_IMAGE_NAME: emilycarla/ms-saudacoes-aleatorias
 
 jobs:
   lint:
@@ -131,8 +133,8 @@ jobs:
         env:
           KOYEB_TOKEN: ${{ secrets.KOYEB_TOKEN }}
           TF_VAR_docker_image_name: ${{ env.DOCKER_IMAGE_NAME }}
-          TF_VAR_docker_image_tag: ${{ env.DOCKER_IMAGE_TAG }}
-      
+          TF_VAR_docker_image_tag: 1.0.${{ github.run_id }}
+
       - name: Salvar Novo Estado
         uses: actions/upload-artifact@v4
         with:
